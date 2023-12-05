@@ -18,9 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $dirtLevel = $_POST['dirtLevel'];
         $address_2 = $_POST['address_2'];
         $status = 1;
-
-        $sql = "INSERT INTO appointments (id_user, id_service, datetime, repeatTime, price, description, roomSize, dirtLevel, address_2, status)
-                VALUES ('$id_user', '$id_service', '$datetime', '$repeatTime', '$price', '$description', '$roomSize', '$dirtLevel','$address_2','$status')";
+        $id_ctv = 0;
+        
+        $sql = "INSERT INTO appointments (id_user, id_service, datetime, repeatTime, price, description, roomSize, dirtLevel, address_2, status, id_ctv)
+                VALUES ('$id_user', '$id_service', '$datetime', '$repeatTime', '$price', '$description', '$roomSize', '$dirtLevel','$address_2','$status', '$id_ctv')";
 
         if ($connection->query($sql) === TRUE) {
             $lastInsertedId = $connection->insert_id;

@@ -54,7 +54,8 @@ while ($row_appointment = mysqli_fetch_array($cek_appointments)) {
         'user_name' => $user_data['name'],
         'user_phone' => $user_data['phone'],
         'user_address' => $user_data['address'],
-        'service_name' => $service_data['name']
+        'service_name' => $service_data['name'],
+        'id_ctv' => $row_appointment['id_ctv'],
     );
 
     array_push($response, $key);

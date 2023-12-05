@@ -23,6 +23,9 @@
             $response['phone'] = $cek_user_result['phone'];
             $response['address'] = $cek_user_result['address'];
             $response['created_at'] = $cek_user_result['created_at'];
+            $id_role = $cek_user_result['id_role'];
+    
+            $response['id_role'] = $id_role;
             $response['message'] = "Vâng, Đăng nhập thành công";
             echo json_encode($response, JSON_UNESCAPED_UNICODE);
         }else {
